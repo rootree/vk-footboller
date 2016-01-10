@@ -59,4 +59,85 @@ After when all changes are made in the CMS, will be generated an update for the 
 
 ## Game rules
 
-![Preloader](/IMG/Preloader.png?raw=true "Optional Title")
+After preloader window: 
+
+![Preloader](https://github.com/rootree/vk-footboller/blob/master/IMG/preloader.png?raw=true "Preloader window")
+
+Users will be the main screen of the game:
+
+![Main screen](https://github.com/rootree/vk-footboller/blob/master/IMG/main.jpg?raw=true "Main screen")
+
+On the main screen there are several options:
+
+1. Change logo of users team
+2. Players in the team
+3. Shop of football players
+4. Sponsors list
+5. Competitions
+6. List of friends and their teams
+7. User's stadion
+
+### User's football players
+
+![Players](https://github.com/rootree/vk-footboller/blob/master/IMG/my_team.png?raw=true "Players")
+
+On this screen the user can define main players. Each player has a specific type:
+
+- forward
+- quarterback
+- linebacker
+- goalkeeper
+
+The type influences on behavior of the team, either the team makes a lot of goals or can defend itself. On this screen the user can increase parameters of the players, sell them, or send them to the reserve.
+
+### Football players shop
+
+![Shop](https://github.com/rootree/vk-footboller/blob/master/IMG/shop.jpg?raw=true "Shop")
+
+In the shop a user can buy players and coaches, then in the team window the user can change the team players.
+
+### Sponsors
+
+![Sponsors](https://github.com/rootree/vk-footboller/blob/master/IMG/sponsor.png?raw=true "Sponsors")
+
+On the sponsors screen a user can choose sponsors which will support user's team (multiplicator on results of the matches)
+
+### Tour selection
+
+When a user has 11 players in his team, he can play with other users or can take part in championship.
+
+![Tour selection](https://github.com/rootree/vk-footboller/blob/master/IMG/tour_selection.jpg?raw=true "Tour selection")
+
+There are three type of competitions
+
+1. Match against another user in a social network
+2. Match against a real team
+3. Participation in a championship
+
+#### Match against another user
+
+A user can choose another user to play against his team
+
+![Choose competitor](https://github.com/rootree/vk-footboller/blob/master/IMG/choose_competitor.jpg?raw=true "Choose competitor")
+
+After when user has chosen a competitor, will be shown several windows about the process of the game, and in the end of the game will be a game result.
+
+A window when user wins
+
+![Win](https://github.com/rootree/vk-footboller/blob/master/IMG/win.jpg?raw=true "Win")
+
+Otherwise
+
+![Win](https://github.com/rootree/vk-footboller/blob/master/IMG/lose.png?raw=true "Win")
+
+After the match a user can see detailed match statistics.
+
+![Match statistics](https://github.com/rootree/vk-footboller/blob/master/IMG/result_of_match.png?raw=true "Match statistics")
+
+#### Match against a real team
+
+This competition against predefined teams.
+
+#### Participation in a championship
+
+To be continued ...

@@ -1,0 +1,15 @@
+[submodule "vk-footboller-server"]
+	path = server
+	url = git@github.com:rootree/vk-footboller-server.git
+[submodule "vk-footboller-client"]
+	path = client
+	url = git@github.com:rootree/vk-footboller-client.git
+[submodule "vk-footboller-preloader"]
+	path = preloader
+	url = git@github.com:rootree/vk-footboller-preloader.git
+[submodule "vk-footboller-content-system"]
+	path = content-system
+	url = git@github.com:rootree/vk-footboller-content-system.git
+[submodule "vk-footboller-server"]
+	path = server
+	url = git@github.com:rootree/vk-footboller-server.git

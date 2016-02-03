@@ -1,5 +1,5 @@
 # VK Footboller
-Football manager for social networks (Facebook, VKontakte, etc.)
+VK Footboller is a football manager for social networks (Facebook, VKontakte, etc.)
 
 ## Content
 
@@ -10,12 +10,11 @@ Football manager for social networks (Facebook, VKontakte, etc.)
 
 ## Overview
 
-VK Footboller is a football manager for social networks like Facebook, Odnoklassniki, VKontakte, etc. Idea of this game is to give friends play with each other, organize their own football teams, to be involved in competition in their university, city, or country, discuss.
+VK Footboller is a football manager for social networks like Facebook, Odnoklassniki, VKontakte, etc. A main idea of this game is to give friends in a social network an opportunity to play with each other, organize their own football teams, to be involved in championships in universities, cities, or countries.
 
-To add a new social network is a matter of using its API. Right now implemented only VKontakte's API, to add a new API is very easy step by creating a new class with the same Interface that VKontakte has.
+This game can be adapted for different social networks. Right now you can find this game only in VKontakte's, but to launch the game on a new social network is very easy, you need to create a new API adapter for the social network with the same Interface that VKontakte has.
 
-In order to see a working version of this game you need an account in VKontakte. The link for the game is https://vk.com/app2014049_4778426. On this moment, in VKontakte there are 220 000 players.
-
+In order to see a working version of the game you need an account in VKontakte (a link on the game https://vk.com/app2014049_4778426). On this moment, 220 000 players are installed the game in VKontakte.
 
 ## Architecture
 
@@ -28,48 +27,48 @@ There are four main elements in the game:
 
 ### Preloader
 
-When a user opens the game in a social network, first, will be loaded the preloader. The preloader is a small application, that checks that the user has all privileges to play in the game (get list of friends, permission to post on a wall, etc.). If the user doesn't have enough privileges in this case will be shown a window with settings of the application where the user can change all necessary settings and privileges. If everything is OK with settings and privileges, the preloader will start loading the main application and its resources.
+When a user opens the game in a social network, first will be loaded the preloader. The preloader is a small application, that checks that a user has all permissions to play in the game (get list of friends, permission to post on the wall, etc.). If a user doesn't have enough privileges in this case will be shown a window with the settings of the application where a user can change all necessary settings and privileges. If everything is OK with settings and privileges, the preloader will start loading the main application and its resources.
 
 ### Client
 
-All interaction with the game happen in the client. The client has a lot of windows, about them will be explained in Game rules section. The client communicate with the server each time when a user does some important for the game action (team settings, buying a new player, a new message on a friend's wall).
+All interaction with a user happens in the client. The client has lots of windows, about them will be explained in the Game Rules section. The client communicates with the server each time when a user commits some actions (changes in a team, buying a new football player, a new message on a friend's wall).
 
 ### Server
 
 The server serves for three main goals:
 
-1. tracks users progress
-2. communicates with API of a social network
+1. saves all changes in a user's profile
+2. communicates with a social network via API
 3. validates all input from the client
 
 ### CMS
 
-With CMS's help it's easy to update all content in the game. By content I mean:
+In CMS a moderator can easily update all content in the game. Can be changed:
 
 - football players
 - coaches
 - stadiums
-- sponsors
+- sponsor companies
 - teams
 
-For example, if you need to add a new football player, you need to upload his avatar and his photo on the sports ground, then fill in settings (type, level, price, etc.). With CMS it's really easy to do.
+For example, if you want to add a new football player, you should upload his avatar and his photo on the sports ground, then setup his parameters (type, level, price, etc.).
 
-After when all changes are made in the CMS, will be generated an update for the client and for the server, and when the game will be deployed, users will see all new changes.
+Then, when all changes are made in the CMS, will be generated an update package for the client and for the server, and when the game will be deployed the package will be rollout.
 
 
 ## Game rules
 
-After preloader window: 
+After the preloader window: 
 
 ![Preloader](https://github.com/rootree/vk-footboller/blob/master/IMG/preloader.png?raw=true "Preloader window")
 
-Users will be the main screen of the game:
+Users will see the main screen of the game:
 
 ![Main screen](https://github.com/rootree/vk-footboller/blob/master/IMG/main.jpg?raw=true "Main screen")
 
 On the main screen there are several options:
 
-1. Change logo of users team
+1. Change a logo of a user's team
 2. Players in the team
 3. Shop of football players
 4. Sponsors list
@@ -81,30 +80,30 @@ On the main screen there are several options:
 
 ![Players](https://github.com/rootree/vk-footboller/blob/master/IMG/my_team.png?raw=true "Players")
 
-On this screen the user can define main players. Each player has a specific type:
+On this screen a user can define a main list of players. Each player has a specific role:
 
 - forward
 - quarterback
 - linebacker
 - goalkeeper
 
-The type influences on behavior of the team, either the team makes a lot of goals or can defend itself. On this screen the user can increase parameters of the players, sell them, or send them to the reserve.
+The role can influence on behavior of the team, either the team makes a lot of goals or can better defend itself. On this screen a user can increase parameters of the players, sell them, or send them to the reserve.
 
-### Football players shop
+### The Shop of football players 
 
 ![Shop](https://github.com/rootree/vk-footboller/blob/master/IMG/shop.jpg?raw=true "Shop")
 
-In the shop a user can buy players and coaches, then in the team window the user can change the team players.
+In the shop a user can buy players and coaches, then on the team screen a user can change the team players.
 
 ### Sponsors
 
 ![Sponsors](https://github.com/rootree/vk-footboller/blob/master/IMG/sponsor.png?raw=true "Sponsors")
 
-On the sponsors screen a user can choose sponsors which will support user's team (multiplicator on results of the matches)
+On the sponsors' screen a user can choose sponsors which will support the team. A sponsor can have an effect on the rewards which the user can get in the end of each competition.
 
 ### Tour selection
 
-When a user has 11 players in his team, he can play with other users or can take part in championship.
+When a user has a full team (11 football players), he/she can play with other users or can take participation in championships.
 
 ![Tour selection](https://github.com/rootree/vk-footboller/blob/master/IMG/tour_selection.jpg?raw=true "Tour selection")
 
@@ -116,28 +115,45 @@ There are three type of competitions
 
 #### Match against another user
 
-A user can choose another user to play against his team
+A user can choose with whom he/she wants to play
 
 ![Choose competitor](https://github.com/rootree/vk-footboller/blob/master/IMG/choose_competitor.jpg?raw=true "Choose competitor")
 
-After when user has chosen a competitor, will be shown several windows about the process of the game, and in the end of the game will be a game result.
+When user has chosen a competitor, will be shown several screens about the process of the game, and in the end will be shown the game result.
 
-A window when user wins
+The screen when user has won
 
 ![Win](https://github.com/rootree/vk-footboller/blob/master/IMG/win.jpg?raw=true "Win")
 
-Otherwise
+Or, will be shown the screen of defeat 
 
 ![Win](https://github.com/rootree/vk-footboller/blob/master/IMG/lose.png?raw=true "Win")
 
-After the match a user can see detailed match statistics.
+After the match a user can see detailed statistics of the match.
 
 ![Match statistics](https://github.com/rootree/vk-footboller/blob/master/IMG/result_of_match.png?raw=true "Match statistics")
 
-#### Match against a real team
+#### Match against real teams
 
 This competition against predefined teams.
 
-#### Participation in a championship
+#### Participation in championships
 
-To be continued ...
+For the each game, between players in a social network, players get some amount of points. If a player has enough points he/she can participate in championships. Championships are conducted once a week. There are four type of area for championships:
+
+- Social network
+- Country
+- City
+- University
+
+Results of championships are being made automatically based on the players' teams. Than more powerful the team then higher place the user will get.
+
+![Match statistics](https://github.com/rootree/vk-footboller/blob/master/IMG/tour.jpg?raw=true "Match statistics")
+
+If a user gets the first, the second, or the third place he/she will be informed about it and he/she will get additional points, which can be exchanged on the new football players or on a new stadium for the team. Everyone in the game will be able to see the winners for one week until the next championships.
+
+![Match statistics](https://github.com/rootree/vk-footboller/blob/master/IMG/tour_win.png?raw=true "Match statistics")
+
+All participants can see detailed statistics of the championships.
+
+![Match statistics](https://github.com/rootree/vk-footboller/blob/master/IMG/gourp_table.png?raw=true "Match statistics")

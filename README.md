@@ -12,9 +12,9 @@ VK Footboller is a football manager for social networks (Facebook, VKontakte, et
 
 VK Footboller is a football manager for social networks like Facebook, Odnoklassniki, VKontakte, etc. A main idea of this game is to give friends in a social network an opportunity to play with each other, organize their own football teams, to be involved in championships in universities, cities, or countries.
 
-This game can be adapted for different social networks. Right now you can find this game only in VKontakte's, but to launch the game on a new social network is very easy, you need to create a new API adapter for the social network with the same Interface that VKontakte has.
+This game can be adapted for different social networks. Right now you can find this game only in VKontakte's, to launch the game on a new social network is very easy, you need to create a new API adapter for the social network with the same Interface that VKontakte has.
 
-In order to see a working version of the game you need an account in VKontakte (a link on the game https://vk.com/app2014049_4778426). On this moment, 220 000 players are installed the game in VKontakte.
+In order to see a working version of the game you need an account in VKontakte (a link on the game https://vk.com/app2014049_4778426). On this moment, 220 000 players installed the game in VKontakte.
 
 ## Architecture
 
@@ -27,11 +27,11 @@ There are four main elements in the game:
 
 ### Preloader
 
-When a user opens the game in a social network, first will be loaded the preloader. The preloader is a small application, that checks that a user has all permissions to play in the game (get list of friends, permission to post on the wall, etc.). If a user doesn't have enough privileges in this case will be shown a window with the settings of the application where a user can change all necessary settings and privileges. If everything is OK with settings and privileges, the preloader will start loading the main application and its resources.
+When a user opens the game in a social network, very first will be loaded the preloader. The preloader is a small application that checks whether a user has all permissions to play in the game (get list of friends, permission to post on a user's wall, etc.). If a user doesn't have enough permissions, in this case will be shown a window with settings of the application where the user can change all necessary settings and privileges. If everything is OK with settings and privileges, the preloader will start loading the main application and its resources.
 
 ### Client
 
-All interaction with a user happens in the client. The client has lots of windows, about them will be explained in the Game Rules section. The client communicates with the server each time when a user commits some actions (changes in a team, buying a new football player, a new message on a friend's wall).
+All interaction with a user happens in the client. The client has lots of windows, about them will be explained in the `Game Rules` section. The client communicates with the server each time when the user commits any actions (changes in a team, buying a new football player, a new message on a friend's wall).
 
 ### Server
 
@@ -43,7 +43,7 @@ The server serves for three main goals:
 
 ### CMS
 
-In CMS a moderator can easily update all content in the game. Can be changed:
+In CMS a moderator can easily update all content in the game. Can be changed or added:
 
 - football players
 - coaches
@@ -93,7 +93,7 @@ The role can influence on behavior of the team, either the team makes a lot of g
 
 ![Shop](https://github.com/rootree/vk-footboller/blob/master/IMG/shop.jpg?raw=true "Shop")
 
-In the shop a user can buy players and coaches, then on the team screen a user can change the team players.
+In the shop a user can buy players and coaches, then on the team screen the user can change his team.
 
 ### Sponsors
 
@@ -109,9 +109,9 @@ When a user has a full team (11 football players), he/she can play with other us
 
 There are three type of competitions
 
-1. Match against another user in a social network
-2. Match against a real team
-3. Participation in a championship
+1. Match against other users in a social network
+2. Match against real teams
+3. Participation in championships
 
 #### Match against another user
 
@@ -119,9 +119,9 @@ A user can choose with whom he/she wants to play
 
 ![Choose competitor](https://github.com/rootree/vk-footboller/blob/master/IMG/choose_competitor.jpg?raw=true "Choose competitor")
 
-When user has chosen a competitor, will be shown several screens about the process of the game, and in the end will be shown the game result.
+When the user has chosen a competitor, will be shown several screens about the process of the game, and in the end will be shown the game result.
 
-The screen when user has won
+The screen when user wins
 
 ![Win](https://github.com/rootree/vk-footboller/blob/master/IMG/win.jpg?raw=true "Win")
 
@@ -139,7 +139,7 @@ This competition against predefined teams.
 
 #### Participation in championships
 
-For the each game, between players in a social network, players get some amount of points. If a player has enough points he/she can participate in championships. Championships are conducted once a week. There are four type of area for championships:
+For each game, between players in a social network, players get some amount of points. If a player has enough points he/she can participate in championships. Championships are conducted once a week. There are four type of area for championships:
 
 - Social network
 - Country
@@ -150,7 +150,7 @@ Results of championships are being made automatically based on the players' team
 
 ![Match statistics](https://github.com/rootree/vk-footboller/blob/master/IMG/tour.jpg?raw=true "Match statistics")
 
-If a user gets the first, the second, or the third place he/she will be informed about it and he/she will get additional points, which can be exchanged on the new football players or on a new stadium for the team. Everyone in the game will be able to see the winners for one week until the next championships.
+If a user gets first, second, or third place he/she will be informed about it and he/she will get additional points, which can be exchanged on the new football players or on a new stadium for the team. Everyone in the game will be able to see the winners for a one week until the next championships happened.
 
 ![Match statistics](https://github.com/rootree/vk-footboller/blob/master/IMG/tour_win.png?raw=true "Match statistics")
 
